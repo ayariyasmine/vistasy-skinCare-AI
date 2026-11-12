@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vistasy - Résultat d'analyse</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f7f7fa;
+    color: #30303a;
+}
+
+header {
+    background: white;
+    padding: 22px 8%;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #8b5479;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 13px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 15px rgba(0,0,0,.04);
+}
+
+.overview {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 18px;
+}
+
+.global-score {
+    background: #8b5479;
+    color: white;
+}
+
+.global-score .number {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.global-score p {
+    color: #f3e7ef;
+    font-size: 14px;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 18px;
+    color: #8b5479;
+}
+
+.label {
+    color: #999;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.zone {
+    margin-bottom: 23px;
+}
+
+.zone-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.zone-info strong {
+    color: #8b5479;
+}
+
+.bar {
+    height: 9px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: #b47d9f;
+    border-radius: 10px;
+}
+
+.description {
+    color: #999;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: #f7edf3;
+    color: #8b5479;
+    padding: 11px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.confidence-value {
+    font-size: 22px;
+    font-weight: bold;
+    color: #8b5479;
+    margin-bottom: 12px;
+}
+
+.date {
+    color: #999;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.footer {
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
+    padding: 20px;
+}
+
+@media(max-width:700px) {
+    .overview {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">VISTASY.</div>
+</header>
+
+<div class="container">
+
+    <h1>Résultat de l'analyse</h1>
+    <p class="subtitle">
+        Consultez les résultats détaillés de votre analyse cutanée.
+    </p>
+
+    <!-- Résumé général -->
+    <div class="overview">
+
+        <div class="card global-score">
+            <h3>Score global</h3>
+            <div class="number">78/100</div>
+            <p>État général satisfaisant</p>
+        </div>
+
+        <div class="card">
+            <h3>Type de peau</h3>
+            <div class="stat-number">Mixte</div>
+            <p class="label">Type de peau détecté</p>
+        </div>
+
+        <div class="card">
+            <h3>Date d'analyse</h3>
+            <div class="stat-number">12/11/2026</div>
+            <p class="label">15:30</p>
+        </div>
+
+    </div>
+
+    <!-- Résultats par zone -->
+    <div class="card">
+        <h2>Analyse détaillée par zone</h2>
+
+        <div class="zone">
+            <div class="zone-info">
+                <span>Front</span>
+                <strong>82/100</strong>
+            </div>
+            <div class="bar">
+                <div class="fill" style="width:82%"></div>
+            </div>
+            <p class="description">Légère brillance</p>
+        </div>
+
+        <div class="zone">
+            <div class="zone-info">
+                <span>Joues</span>
+                <strong>75/100</strong>
+            </div>
+            <div class="bar">
+                <div class="fill" style="width:75%"></div>
+            </div>
+            <p class="description">Quelques rougeurs</p>
+        </div>
+
+        <div class="zone">
+            <div class="zone-info">
+                <span>Zone T</span>
+                <strong>68/100</strong>
+            </div>
+            <div class="bar">
+                <div class="fill" style="width:68%"></div>
+            </div>
+            <p class="description">Excès de sébum</p>
+        </div>
+
+        <div class="zone">
+            <div class="zone-info">
+                <span>Contour des yeux</span>
+                <strong>85/100</strong>
+            </div>
+            <div class="bar">
+                <div class="fill" style="width:85%"></div>
+            </div>
+            <p class="description">Signes de fatigue légers</p>
+        </div>
+
+    </div>
+
+    <!-- Problèmes détectés -->
+    <div class="card">
+        <h2>Problèmes cutanés détectés</h2>
+
+        <div class="tags">
+            <span class="tag">Pores visibles</span>
+            <span class="tag">Brillance</span>
+            <span class="tag">Rougeurs légères</span>
+            <span class="tag">Cernes</span>
+            <span class="tag">Excès de sébum</span>
+        </div>
+    </div>
+
+    <!-- Fiabilité -->
+    <div class="card">
+        <h2>Fiabilité de l'analyse</h2>
+
+        <div class="confidence-value">94%</div>
+
+        <div class="bar">
+            <div class="fill" style="width:94%"></div>
+        </div>
+
+        <p class="description">
+            Niveau de confiance estimé du résultat de l'analyse.
+        </p>
+    </div>
+
+    <div class="footer">
+        Vistasy © 2026 - Résultats à titre illustratif.
+    </div>
+
+</div>
+
+</body>
+</html>
